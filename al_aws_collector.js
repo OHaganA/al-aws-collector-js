@@ -84,10 +84,10 @@ class AlAwsCollector {
             process.env.al_data_residency ?
                 process.env.al_data_residency :
                 'default';
-        this._alAzcollectEndpoint = process.env.azollect_api;
+        this._alAzcollectEndpoint = process.env.azcollect_api;
         this._aimsc = new m_alServiceC.AimsC(process.env.al_api, aimsCreds);
         this._endpointsc = new m_alServiceC.EndpointsC(process.env.al_api, this._aimsc);
-        this._azcollectc = new m_alServiceC.AzcollectC(process.env.azollect_api, this._aimsc);
+        this._azcollectc = new m_alServiceC.AzcollectC(process.env.azcollect_api, this._aimsc);
         this._ingestc = new m_alServiceC.IngestC(process.env.ingest_api, this._aimsc);
         this._formatFun = formatFun;
     }
